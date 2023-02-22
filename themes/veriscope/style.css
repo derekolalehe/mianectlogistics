@@ -1,0 +1,719 @@
+/*
+
+Theme Name: VeriScope
+Author: Derek Olalehe (Totally WP)
+Author URI: https://www.totallywp.dev/
+Description: Logistic Services & Tracking
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags:
+Text Domain: veriscope
+
+*/
+
+
+/*GENERAL*/
+
+body {
+    margin: 0px;
+}
+
+a {
+    text-decoration: none;
+    font-family: 'Karla', sans-serif; 
+}
+
+input, button, textarea {
+    font-family: 'Karla', sans-serif; 
+}
+
+a:hover {
+    color: #00032E;
+}
+
+h1, h1 > span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 50px;
+    font-weight: 900;
+    margin: 0px;
+}
+
+h2, h2 > span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
+    font-weight: 900;
+    margin: 0px;
+}
+
+h3, h3 > span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 36px;
+    font-weight: 700;    
+    margin: 0px;
+}
+
+h4, h4 > span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 0px;
+}
+
+h5, h5 > span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0px;
+}
+
+h6, h6 > span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0px;
+}
+
+p, span {
+    font-family: 'Karla', sans-serif; 
+    font-weight: 400;
+    margin: 0px;
+    font-size: 18px;
+}
+
+.clearfix-sm {
+    height: 25px;
+}
+
+.clearfix-md {
+    height: 40px;
+}
+
+.clearfix-lg {
+    height: 80px;
+}
+
+/*HEADER*/
+
+#site-header {
+
+    background-color: transparent;
+    position: absolute;
+    top: 0px;
+    z-index: 4;
+    padding: 0px;
+    border-bottom: none;
+    display: block;
+    transform: translateX(-50%);
+    left: 50%;
+
+}
+
+#header-top-bar {
+
+    width: 100%;
+    margin: 45px 0px 20px 0px;
+    padding: 10px 0px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+
+}
+
+
+#site-header > ul {
+
+    font-family: 'Karla', sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    list-style-type: none;
+    float: right;
+    width: unset;
+    text-align: unset;
+    margin: 20px 30px 0px 0px;
+    text-transform: uppercase;
+
+}
+
+
+#site-header > ul > li {
+
+    display: inline;
+    padding: 0px 12px;
+    border-bottom: none;
+    position: relative;
+
+}
+
+
+#site-header > ul > li > a {
+
+    text-decoration: none;
+    color: #FFF;
+    padding: 5px 8px 12px 8px;
+    
+}
+
+
+#site-header > ul > li > a:hover {
+
+    font-weight: 500;
+
+}
+
+#header-reg-form .veri-submit-button-container {
+    float: right;
+    margin-right: 20px;
+    margin-bottom: 20px;
+}
+
+.veri-submit-button-container {    
+    margin-top: 20px;
+}
+
+#mobile-menu-icon {
+    width: 25px;
+    float: right;
+}
+
+/*FOOTER*/
+#site-footer {
+    background-color: #1A1A1A;
+    width: 100%;
+    padding: 45px 0px;
+}
+
+#footer-contents {
+    text-align: center;
+    margin: 0px auto;
+}
+
+.footer-widget-area {
+    vertical-align: top;
+    padding: 0px 25px;
+    max-width: 350px;
+    text-align: left;
+    color: #FFF;
+}
+
+.footer-widget-area p {
+    line-height: 1.7;
+    color: #CCC;
+}
+
+.footer-widget-area:nth-child(1) {
+    max-width: 450px;
+}
+
+.footer-widget-area:nth-child(1) table > tbody > tr > td {
+    padding: 0px 15px;
+    vertical-align: top;
+}
+
+.widgettitle {
+    color: #FFF;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+table#footer-useful-links {
+    border: none;
+    border-collapse: collapse;
+}
+
+table#footer-useful-links > tbody > tr > td {
+    border-bottom: 1px solid rgba(255,255,255,.35);
+}
+
+table#footer-useful-links > tbody > tr > td {
+    padding: 10px 0px 10px 0px;
+}
+
+table#footer-useful-links > tbody > tr:first-child > td {
+    padding: 0px 0px 10px 0px;
+}
+
+table#footer-useful-links > tbody > tr > td:first-child {
+    padding-right: 25px;
+}
+
+table#footer-useful-links a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #CCC;
+    font-size: 18px;
+}
+
+#footer-email {
+    color: #FFF;
+}
+
+
+/*SHORTCODES*/
+
+/*Submit Button*/
+.veri-submit-button-container {
+    position: relative;
+    display: inline-block;
+}
+
+.veri-submit-button-container > div {
+    padding: 7px 7px 5px 7px;
+    text-align: center;
+    margin: 0px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.veri-submit-button-container > div > img {
+    width: 25px;
+    cursor: pointer;
+}
+
+.veri-submit-button-container > button,
+.veri-submit-button-container > a {
+    cursor: pointer;
+    margin: 0px;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 12px 12px 13px 12px;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.veri-submit-button-container > a {
+    font-size: 13px;
+}
+
+/*Registration Form*/
+#veri-reg-form-container {
+    margin: 20px 0px 20px 25px;
+    position: relative;
+}
+
+#veri-reg-form-container > h4 {
+    text-transform: uppercase;
+    color: #FFF;
+    margin-bottom: 25px;
+}
+
+#veri-reg-form-container .field-container { 
+    margin: 0px 0px 30px 0px;
+}
+
+#veri-reg-form-container .field-container > input {
+    background-color: rgba(255, 255, 255, .2);
+    border: 1px solid #CCC;
+    color: #CCC;
+    padding: 6px;
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+    margin-right: 20px;
+    width: 300px
+}
+
+#veri-reg-form-container .field-container > input[type="text"] {
+    margin-right: 20px;
+    width: 300px
+}
+
+#veri-reg-form-container .field-container > input[type="date"] {
+    margin-right: 150px;
+    width: 170px
+}
+
+#veri-reg-form-container .field-container > input[name="r-mi"] {
+    text-align: center; 
+    width: 30px;
+    margin-right: 290px;
+}
+
+#veri-reg-form-container .field-container > input[name="r-uid"] {
+    width: 120px;
+    margin-right: 200px;
+}
+
+#veri-reg-form-container .field-container > h6 {
+   color: #FFF;
+   text-transform: uppercase;
+   display: inline;
+   font-size: 12px;
+   vertical-align: middle
+}
+
+#ccpl-link {
+    width: 150px;
+    position: absolute;
+    right: 0px;
+    margin-right: 25px;
+    margin-top: 20px;
+}
+
+/*Contact Form*/
+#veri-contact-form-container {
+    padding: 50px;
+    background-color: #FFF;
+}
+
+#veri-contact-form-container > h2 {
+    text-transform: uppercase;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+#veri-contact-form-container .field-container { 
+    margin: 0px 0px 50px 0px;
+}
+
+#veri-contact-form-container .field-container > input,
+#veri-contact-form-container .field-container > textarea {
+    background-color: #FFF;
+    border: 2px solid #A5A5A5;
+    color: #333;
+    padding: 20px;
+    display: block;
+    font-size: 14px;
+}
+
+#veri-contact-form-container .field-container > textarea {
+    height: 200px;
+    resize: none;
+}
+
+#veri-contact-form-container .field-container > input[type="text"],
+#veri-contact-form-container .field-container > textarea {
+   text-transform: uppercase;
+}
+
+
+/*Icon Box*/
+.veri-icon-box.icon-box-v1 {
+
+    padding: 20px 30px;
+    position: relative;
+    text-align: center;
+
+}
+
+.veri-icon-box.icon-box-v2 {
+
+    padding: 30px;
+    position: relative;
+    text-align: left;
+    border: 1px solid #f2f2f2;
+    box-shadow: 1px 1px 1px #f2f2f2;
+    min-height: 210px;
+
+}
+
+.veri-icon-box.icon-box-v1 > img {
+
+    width: 25px;
+    margin-bottom: 9px;
+
+}
+
+.veri-icon-box.icon-box-v2  img {
+
+    width: 25px;
+
+}
+
+.veri-icon-box.icon-box-v2 > table {
+
+    margin-bottom: 10px;
+
+}
+
+.veri-icon-box.icon-box-v2 > table > tbody > tr > td:first-child div {
+
+    padding: 6px 8px;
+    border-radius: 5px;
+    margin-right: 12px;
+
+}
+
+.veri-icon-box > p:last-child {
+
+    color: rgba(255,255,255,.55);
+
+}
+
+.veri-icon-box.icon-box-v2 > p:last-child {
+
+    color: #333;
+
+}
+
+.veri-icon-box.icon-box-v1 > h6 {
+
+    text-transform: uppercase;
+    font-weight: 600;
+
+}
+
+.veri-icon-box.icon-box-v2 h5 {
+
+    text-transform: capitalize;
+    color: #333;
+    font-weight: 900;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.icon-box-v2-accent {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    background-color: #29AAE1;
+    opacity: .1;
+}
+
+/*Heading*/
+.veri-heading-container {
+    width: 100%;
+    text-align: center;
+    margin: 70px auto;
+    overflow: hidden;
+}
+
+.veri-heading-container > h1 {
+    font-weight: 900;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-transform: uppercase;
+}
+
+.veri-heading-container > p {
+    position: relative;
+    font-size: 17px;
+    padding: 50px 0px 0px 0px;
+    margin-bottom: 25px;
+    text-transform: capitalize;
+}
+
+.veri-heading-container > h2 {
+    position: relative;
+    text-transform: uppercase;
+}
+
+#footer-copyright {
+    color: #FFF;
+    background-color: #181818;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding: 25px 45px;
+}
+
+#footer-copyright > p {    
+    font-size: 15px;
+    display: inline;
+}
+
+#footer-copyright > a { 
+    float: right;
+}
+
+#footer-copyright > a > img { 
+    /* width: 30px;; */
+}
+
+/*Elementor*/
+span.elementor-counter-number {
+    font-size: 42px;
+    font-weight: 900;
+    font-family: 'Monsterrat', sans-serif;
+}
+
+div.elementor-counter-title {
+    font-size: 18px;
+    font-family: 'Monsterrat', sans-serif;
+    font-weight: 700;
+}
+
+
+/*PLUGINS*/
+
+/*WPCargo*/
+a.waves-effect, a.waves-light {
+    display: block!important;
+    margin: 0px auto!important;
+}
+
+.sidebar-fixed .logo-wrapper img {
+    max-height: unset!important;
+    display: block!important;
+    margin: 0px auto!important;
+}
+
+
+@media screen and (max-width: 767px) {
+
+    #mobile-menu-icon {
+        display: inline-block;
+    }
+
+    #site-header > ul {
+        display: none;
+    }
+
+    #site-header {
+        width: 95%;
+    }
+    
+    .header-logo {
+        width: 80px;
+    }  
+
+    #veri-contact-form-container .field-container > input,
+    #veri-contact-form-container .field-container > textarea {
+        width: 100%;
+    }
+
+    .footer-widget-area {
+        display: block;
+        margin-top: 25px;
+    }
+    
+    .footer-widget-area:nth-child(1) table  img {
+        width: 80px;
+    }
+
+    .veri-heading-container > h1 {
+        font-size: 40px;
+    }
+
+    .veri-heading-container > h2 {
+        font-size: 40px;
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+    #mobile-menu-icon {
+        display: inline-block;
+    }
+
+    #site-header > ul {
+        display: none;
+    }
+
+    #site-header {
+        width: 95%;
+    }
+
+    .header-logo {
+        width: 80px;
+    }    
+
+    #veri-contact-form-container .field-container > input,
+    #veri-contact-form-container .field-container > textarea {
+        width: 100%;
+    }
+
+    .footer-widget-area {
+        display: block;
+        margin-top: 25px;
+    }
+
+    .footer-widget-area:nth-child(1) table  img {
+        width: 80px;
+    }
+
+    .veri-heading-container > h1 {
+        font-size: 40px;
+    }
+
+    .veri-heading-container > h2 {
+        font-size: 40px;
+    }
+    
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1199px) {
+
+    #mobile-menu-icon {
+        display: none;
+    }
+
+    #site-header > ul {
+        display: block;
+    }
+
+    #site-header {
+        width: 95%;
+    }
+
+    .header-logo {
+        width: 120px;
+    }
+
+    #veri-contact-form-container .field-container > input,
+    #veri-contact-form-container .field-container > textarea {
+        width: 400px;
+    }
+
+    .footer-widget-area {
+        display: inline-block;
+        margin-top: unset;
+    }    
+        
+    .footer-widget-area:nth-child(1) table  img {
+        width: 120px;
+    }
+
+    .veri-heading-container > h1 {
+        font-size: 120px;
+    }
+
+    .veri-heading-container > h2 {
+        font-size: 60px;
+    }
+
+}
+
+@media screen and (min-width: 1200px) {
+
+    #mobile-menu-icon {
+        display: none;
+    }
+
+    #site-header > ul {
+        display: block;
+    }
+
+    #site-header {
+        width: 1140px;
+    }
+    
+    .header-logo {
+        width: 120px;
+    }
+
+    #veri-contact-form-container .field-container > input,
+    #veri-contact-form-container .field-container > textarea {
+        width: 400px;
+    }
+
+    .footer-widget-area {
+        display: inline-block;
+        margin-top: unset;
+    }
+
+        
+    .footer-widget-area:nth-child(1) table  img {
+        width: 120px;
+    }
+
+    .veri-heading-container > h1 {
+        font-size: 120px;
+    }
+
+    .veri-heading-container > h2 {
+        font-size: 60px;
+    }
+        
+}

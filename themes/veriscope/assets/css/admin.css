@@ -1,0 +1,12 @@
+.onboard-action {
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.onboard-approve {
+    color: #ff4500;
+}
+
+.onboard-reject {
+    color: #4b0082;
+}
